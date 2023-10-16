@@ -19,7 +19,7 @@ const siteMetadata = {
   twitter: 'https://twitter.com/Twitter',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/in/steven-sol%C3%ADs-9983701ba',
   web: 'https://solis-steven.github.io/portfolio/',
   locale: 'es-ES',
   analytics: {

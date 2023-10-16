@@ -1,0 +1,164 @@
+---
+title: 'Evita esto, Haz esto: Mejores Prácticas de Codificación en JavaScript para Programadores Junior'
+date: '2023-10-15'
+tags: ['JavaScript', 'Buenas Prácticas', 'Código Limpio']
+draft: false
+readingTime: '4 minutos'
+summary: El artículo presenta consejos esenciales de codificación en JavaScript para programadores junior, destacando la importancia de prácticas como nombres descriptivos, reducción de parámetros, evitar comentarios redundantes, eliminar código innecesario y evitar duplicación de código. Al seguir este enfoque, los programadores pueden mejorar la calidad y eficiencia de su código.
+---
+
+## Introducción
+
+Como programador junior, es fundamental aprender a escribir código limpio y eficiente en JavaScript. A continuación, te presentamos algunas prácticas clave para mejorar tus habilidades. Sigue el formato "Evita esto, haz esto" para un mejor entendimiento.
+
+1. Evita Nombres No Descriptivos
+
+Evita el uso de nombres de variables, funciones y clases que carezcan de significado. Opta por nombres descriptivos:
+
+```js
+// Evita esto:
+let x = 10;
+
+// Haz esto:
+let numberOfAttempts = 10;
+```
+
+En el ejemplo anterior podemos observar que la variable tiene un nombre explícito, un nombre buscable, un nombre que mejora la legibilidad de nuestro código. 
+
+2. Evita Muchos Parámetros
+
+Evita utilizar una gran cantidad de parámetros en una función. En lugar de eso, opta por utilizar objetos para agrupar los parámetros relacionados. Esto mejora la claridad y mantenibilidad de tu código.
+
+```js
+// Evita esto:
+function createUser(name, lastName, age, email, phoneNumber, country) {
+// ...
+}
+
+createUser("Juan", "Mora", 34, "juan@example.com", "123-456-789", "Spain");
+
+// Haz esto:
+function createUser(userData) {
+  // ...
+}
+
+// Uso de la función
+const userData = {
+  name: "Juan",
+  lastName: "Mora",
+  age: 34
+  email: "juan@example.com",
+  phoneNumber: "123-456-789",
+  country: "Spain",
+};
+
+const newUser = createUser(userData);
+```
+
+3. Evita Comentarios Inútiles
+
+Evita comentarios que simplemente repiten lo que el código ya dice. Los comentarios deben proporcionar información adicional o aclaración cuando sea necesario, pero el código en sí mismo debe ser autoexplicativo. 
+
+
+```js
+// Evita esto
+
+// Suma dos números
+function sum(a, b) {
+    return a + b;
+}
+
+// Haz esto
+function sum(a, b) {
+  return a + b;
+}
+```
+
+Si tu código es lo suficientemente legible, evita escribir comentarios que no son necesarios.
+
+4. Evita dejar código inútil
+
+Al escribir y mantener tu código, es fundamental evitar dejar fragmentos de código que no se utilizan o han quedado obsoletos. La presencia de código innecesario puede complicar la comprensión y el mantenimiento de tu programa. Para mantener tu base de código ordenada y eficiente, considera lo siguiente:
+```js
+// Evita esto
+
+// something();
+doStuff();
+// doMoreStuff();
+// stuffs();
+
+// Haz esto
+doStuff();
+```
+
+Para mantener tu código limpio y claro, elimina o comenta cualquier código que no estés utilizando activamente en tu aplicación. De esta manera, tu código será más fácil de entender y mantener, y evitarás confusión innecesaria.
+
+5. Evita la Duplicación de Código
+
+La duplicación de código, también conocida como "copia y pega" excesivo, es un mal hábito que debe evitarse. Cuando tienes bloques de código idénticos o similares en múltiples lugares de tu programa, estás aumentando la carga de mantenimiento y el riesgo de errores. Aquí tienes algunos consejos para evitar la duplicación de código:
+
+```js
+// Evita esto
+function displayFruitList(fruits) {
+    fruits.forEach((fruit) => {
+        const name = fruit.getName();
+        const color = fruit.getColor();
+        const taste = fruit.getTaste();
+        const fruitDetails = {
+            name,
+            color,
+            taste
+        };
+
+        showDetails(fruitDetails);
+    });
+}
+
+function displayVegetableList(vegetables) {
+    vegetables.forEach((vegetable) => {
+        const name = vegetable.getName();
+        const color = vegetable.getColor();
+        const type = vegetable.getType();
+        const vegetableDetails = {
+            name,
+            color,
+            type
+        };
+
+        showDetails(vegetableDetails);
+    });
+}
+
+// Haz esto
+function displayItemList(items) {
+    items.forEach((item) => {
+        const name = item.getName();
+        const description = item.getDescription();
+
+        let additionalInfo = {};
+
+        if(item.category === 'fruit') {
+            additionalInfo = {
+                color: item.getColor(),
+                taste: item.getTaste()
+            };
+        } else if (item.category === 'vegetable') {
+            additionalInfo = {
+                type: item.getType()
+            }
+        }
+
+        const itemDetails = {
+            name,
+            description,
+            ...additionalInfo
+        };
+
+        showDetails(itemDetails);
+    });
+}
+```
+
+Como programador junior, es fundamental adoptar las mejores prácticas de codificación en JavaScript para escribir un código limpio, eficiente y fácil de mantener. Siguiendo el formato 'Evita esto, haz esto', puedes mejorar tus habilidades de programación y desarrollar un código más claro y legible. 
+
+ Las prácticas clave incluyen el uso de nombres descriptivos para variables, reducir la duplicación de código, evitar comentarios innecesarios y eliminar código no utilizado. Además, adherirse a los principios SOLID y estructurar el código de manera modular te ayudará a construir aplicaciones JavaScript sólidas y mantenibles. Al seguir estas prácticas, no solo mejorarás como programador junior, sino que también crearás un código más eficiente y fácil de mantener en tus proyectos.

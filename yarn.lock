@@ -2048,13 +2048,6 @@
   "resolved" "https://registry.npmjs.org/@types/ms/-/ms-0.7.32.tgz"
   "version" "0.7.32"
 
-"@types/next@^9.0.0":
-  "integrity" "sha512-gnBXM8rP1mnCgT1uE2z8SnpFTKRWReJlhbZLZkOLq/CH1ifvTNwjIVtXvsywTy1dwVklf+y/MB0Eh6FOa94yrg=="
-  "resolved" "https://registry.npmjs.org/@types/next/-/next-9.0.0.tgz"
-  "version" "9.0.0"
-  dependencies:
-    "next" "*"
-
 "@types/node@>=12.12.47", "@types/node@>=13.7.0":
   "integrity" "sha512-eWO4K2Ji70QzKUqRy6oyJWUeB7+g2cRagT3T/nxYibYcT4y2BDL8lqolRXjTHmkZCdJfIPaY73KbJAZmcryxTQ=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-20.8.6.tgz"

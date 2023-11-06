@@ -82,7 +82,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Header />
                 <main className="mb-auto">{children}</main>
               </SearchProvider>
-              <Footer />
+
+              <section className="mb-10">
+                <Footer />
+              </section>
             </div>
           </SectionContainer>
         </ThemeProviders>

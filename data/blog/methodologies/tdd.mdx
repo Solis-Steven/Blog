@@ -1,0 +1,36 @@
+---
+title: '¿Qué es TDD y para qué funciona?'
+date: '2023-11-07'
+tags: ['Metodologías', 'TDD']
+draft: false
+readingTime: ''
+summary: 
+---
+
+## Introducción
+
+En el mundo del desarrollo de software, existen un gran número de prácticas y técnicas diseñadas para mejorar la calidad y eficiencia de los proyectos. Una de ellas es el Desarrollo Dirigido por Pruebas (TDD, por sus siglas en inglés). En este artículo, exploraremos qué es TDD y por qué es tan valioso que cualquier desarrollador la conozca.
+
+## ¿Qué es TDD?
+
+El Desarrollo Dirigido por Pruebas es una metodología de desarrollo de software que se centra en escriber pruebas antes de escribir el código. Esta técnica la podemos resumir en un simple ciclo de 3 pasos
+
+1. En primer lugar, encontramos la fase roja, donde los desarrolladores  deben escribir las pruebas respectivas que cubran los casos de prueba. Se le conoce como fase roja ya que normalmente estas pruebas fallan ya que no se encuentra con la implementación necesaria y cuando una prueba falla esta se verá de color rojo, de ahí el nombre.
+
+2. En segundo lugar tenemos la fase verde donde se escribe código con el único objetivo de pasar las pruebas y cuando la prueba pasa esta es de color verde, de ahí el nombre. En esta fase no se tiene en cuenta las buenas prácticas, por el momento el único objetivo es pasar las pruebas.
+
+3. Finalmente tenemos la fase de refactorización donde se pretende pasar a limpio el código escrito en la fase anterior, es decir, evaluando e implementando las buenas prácticas, siempre con la ventaja de que con cada modificación se puede verificar si el código sigue pasando las pruebas o no.
+
+## ¿Para qué funciona TDD?
+
+1. **Mejora la calidad del software:** El TDD se utiliza para garantizar que el código cumpla con los requisitos definidos. Al escribir pruebas antes de implementar funcionalidades, se crea un sistema de validación constante que reduce la probabilidad de errores y garantiza un software más confiable.
+
+2. **Claridad en los requisitos:** TDD fomenta la especificación detallada de las funcionalidades antes de su implementación. Esto ayuda a los desarrolladores a comprender claramente lo que se espera de una parte particular del software, lo que a su vez facilita la comunicación y colaboración en el equipo.
+
+3. **Facilita el mantenimiento:** Una de las funciones clave del TDD es servir como red de seguridad. Cuando se realizan cambios en el código, las pruebas actúan como defensores de la integridad del software. Cualquier regresión se detecta rápidamente, lo que simplifica y agiliza el proceso de mantenimiento.
+
+4. **Ahorro de tiempo y dinero:** Aunque puede parecer que TDD requiere tiempo adicional al escribir pruebas, ahorra tiempo a largo plazo al reducir la cantidad de tiempo dedicada a la depuración y corrección de errores. Además, la detección temprana de problemas ayuda a evitar costosos errores en etapas posteriores del desarrollo.
+
+5. **Fomenta la agilidad y flexibilidad:** TDD permite a los desarrolladores realizar cambios en el código con confianza, ya que las pruebas proporcionan retroalimentación inmediata sobre el impacto de dichos cambios. Esto facilita la adaptación a nuevos requisitos y la evolución del software de manera más ágil.
+
+En resumen, el TDD funciona para mejorar la calidad del software, proporcionar claridad en los requisitos, facilitar el mantenimiento, ahorrar tiempo y dinero, y fomentar la agilidad y flexibilidad en el desarrollo de software. Al adoptar esta metodología, los equipos de desarrollo pueden alcanzar un nivel más alto de eficiencia y satisfacción del cliente.

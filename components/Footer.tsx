@@ -8,12 +8,10 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <h3 className='md:border-r-2 md:px-6 font-bold dark:text-white
           text-xl'>
-            {siteMetadata.author}
+            {siteMetadata.author} <span className="font-normal">©</span> {""}
+            <span className='text-cyan-500'>{`${new Date().getFullYear()}`}</span>
           </h3>
-          <div>{` ©`}</div>
-          <div className='text-cyan-500'>{`${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
-          <Link href="/">{siteMetadata.title}</Link>
+          <Link href="/">• {siteMetadata.title}</Link>
         </div>
         <div className="flex items-center flex-col space-x-4 mt-4 md:mt-0">
           <div className="flex gap-2">

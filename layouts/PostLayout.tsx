@@ -84,7 +84,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <dd className="w-6/12">
                 <ul className="gap-4 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8">
                   {authorDetails.map((author) => (
-                    <li className="flex items-center space-x-2" key={author.name}>
+                    <li className="flex items-center space-x-2 justify-center md:justify-start" key={author.name}>
                       {author.avatar && (
                         <Image
                           src={author.avatar}
@@ -104,10 +104,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </dd>
               {tags && (
                   <div className="py-4 xl:py-8 w-6/12">
-                    <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+                    <h2 className="text-xs text-center md:text-start uppercase tracking-wide
+                     text-gray-500 dark:text-gray-400 mb-2">
                       Etiquetas
                     </h2>
-                    <div className="flex flex-wrap gap-y-2">
+                    <div className="flex flex-wrap gap-y-2 justify-center md:justify-start">
                       {tags.map((tag) => (
                         <Tag key={tag} text={tag} />
                       ))}
